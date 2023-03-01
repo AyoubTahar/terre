@@ -3,8 +3,7 @@ const readline = require("readline").createInterface({
   output: process.stdout,
 });
 
-readline.question("Entrer un chiffre \n", (lettre) => {
-  let chiffre = Number(lettre);
+readline.question("Entrer un chiffre \n", (chiffre) => {
   if ((chiffre > 0 || chiffre < 0) ) {
     if (chiffre % 2 == 0 || chiffre % 2 == -0) {
       console.log("chiffre paire");
