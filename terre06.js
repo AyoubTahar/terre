@@ -6,7 +6,7 @@ const readline = require("readline").createInterface({
   readline.question("Entrer une phrase \n", phrase => {
     const phraseA = phrase
     let phraseB= ''
-      for(let i = phraseA.length ; i >= 0 ; i--){
+      for(let i = phraseA.length-1; i >= 0 ; i--){
         phraseB +=  phraseA[i]
       }
       console.log(phraseB)
