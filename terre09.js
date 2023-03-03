@@ -6,7 +6,7 @@ const readline = require("readline").createInterface({
   readline.question("Entrer un nombre \n", a => {
     let estDecimal = true
     let racineCarre = ''
-    if (a >= 0 && Number.isInteger(a*1)){
+    if (a >= 0 && (a ^ 0) === a){
         for(let i = 0 ; i <= a ; i++) {
             if((i*i) == a){
                 estDecimal = false
