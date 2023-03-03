@@ -4,19 +4,24 @@ const readline = require("readline").createInterface({
   });
   
   readline.question("Entrer un nombre \n", a => {
-    
+    let estDecimal = true
+    let racineCarre = ''
     if (a >= 0 && Number.isInteger(a*1)){
         for(let i = 0 ; i <= a ; i++) {
             if((i*i) == a){
-                console.log(i)
-            }
-            else if (i == a){
-                console.log('La racine est décimale')
+                estDecimal = false
+                racineCarre = i
+                break
             }
         }
     }
     else{
         console.log('Entrée invalide')
     }
+    if (estDecimal){
+        console.log('La racine est décimale')
+        } else {
+        console.log(racineCarre)
+        }
       readline.close();
   });
